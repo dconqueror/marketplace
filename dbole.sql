@@ -1,23 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 10, 2016 at 04:24 PM
--- Server version: 10.0.17-MariaDB
--- PHP Version: 5.6.14
+-- Host: localhost
+-- Generation Time: Oct 10, 2016 at 03:39 PM
+-- Server version: 5.5.52-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `dbole`
+-- Database: `oleole`
 --
 
 -- --------------------------------------------------------
@@ -26,10 +20,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `kategori`
 --
 
-CREATE TABLE `kategori` (
-  `id_kategori` int(5) NOT NULL,
-  `nama_kategori` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `kategori` (
+  `id_kategori` int(5) NOT NULL AUTO_INCREMENT,
+  `nama_kategori` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_kategori`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -37,8 +32,8 @@ CREATE TABLE `kategori` (
 -- Table structure for table `produk`
 --
 
-CREATE TABLE `produk` (
-  `id_produk` int(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `produk` (
+  `id_produk` int(5) NOT NULL AUTO_INCREMENT,
   `id_kategori` int(5) NOT NULL,
   `produk_owner` int(20) NOT NULL,
   `nama_produk` varchar(100) NOT NULL,
@@ -48,16 +43,9 @@ CREATE TABLE `produk` (
   `stok` int(5) NOT NULL,
   `berat` decimal(5,2) NOT NULL,
   `tgl_masuk` date NOT NULL,
-  `gambar` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `produk`
---
-
-INSERT INTO `produk` (`id_produk`, `id_kategori`, `produk_owner`, `nama_produk`, `deskripsi`, `satuan`, `harga`, `stok`, `berat`, `tgl_masuk`, `gambar`) VALUES
-(546, 5443, 0, 'Perahu Pinisi', 'Merupakan miniatur perahu tradisional sulawesi selatan', 'liter', 30000, 7, '2.00', '2016-06-15', 'sample.jpg'),
-(547, 5443, 0, 'Perahu Pinisi', 'Merupakan miniatur perahu tradisional sulawesi selatan', '', 30000, 7, '2.00', '0000-00-00', 'sample.jpg');
+  `gambar` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_produk`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=557 ;
 
 -- --------------------------------------------------------
 
@@ -65,7 +53,7 @@ INSERT INTO `produk` (`id_produk`, `id_kategori`, `produk_owner`, `nama_produk`,
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(50) NOT NULL,
   `pass` varchar(50) NOT NULL,
   `nama` varchar(100) NOT NULL,
@@ -73,45 +61,6 @@ CREATE TABLE `user` (
   `nope` varchar(20) NOT NULL,
   `level_user` varchar(20) NOT NULL,
   `status` varchar(50) NOT NULL,
-  `id_session` varchar(100) NOT NULL
+  `id_session` varchar(100) NOT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `kategori`
---
-ALTER TABLE `kategori`
-  ADD PRIMARY KEY (`id_kategori`);
-
---
--- Indexes for table `produk`
---
-ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id_produk`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`username`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `kategori`
---
-ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `produk`
---
-ALTER TABLE `produk`
-  MODIFY `id_produk` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=557;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
