@@ -51,7 +51,7 @@
 
 								<div class="form-group">
 									<div class="col-md-12 widget-right">
-										<button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+										<button type="reset" onclick="history.back()" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
 										<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Simpan</button>
 									</div>
 								</div>
