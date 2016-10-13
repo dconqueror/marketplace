@@ -29,6 +29,13 @@
 								</div>
 								
 								<div class="form-group">
+									<label class="col-md-3 control-label" for="satuan">Satuan</label>
+									<div class="col-md-3">
+									<input name="jenis" type="text" placeholder="Jenis Satuan" class="form-control">
+									</div>
+								</div>
+								
+								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">Harga Satuan</label>
 									<div class="col-md-4">
 									<input name="harga" type="text" placeholder="Rupiah (Rp)" class="form-control">
