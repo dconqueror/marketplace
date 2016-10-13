@@ -9,7 +9,7 @@ mysql_query("UPDATE produk SET id_kategori = '$_POST[kategori]',
 								     harga = '$_POST[harga]',
 									  stok = '$_POST[stok]',
 									 berat = '$_POST[berat]',
-									gambar = '$gbr',
+									gambar = '$gbr'
 						   WHERE id_produk = '$_POST[id]'");
 						   
 header('location:../../index.php?page=produksaya')
