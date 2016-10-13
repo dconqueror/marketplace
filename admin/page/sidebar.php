@@ -14,6 +14,10 @@
 			<a href="index.php?page=produksaya"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Produk Saya</a>
 		</li>
 		
+		<li>
+			<a href="index.php?page=kategori"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Kategori</a>
+		</li>
+		
 
 		<li role="presentation" class="divider"></li>
 
