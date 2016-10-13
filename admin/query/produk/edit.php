@@ -6,6 +6,7 @@ $gbr = 'sample.jpg';
 mysql_query("UPDATE produk SET id_kategori = '$_POST[kategori]',
 							   nama_produk = '$_POST[nama_produk]',
 							     deskripsi = '$_POST[deskripsi]',
+									satuan = '$_POST[jenis]',
 								     harga = '$_POST[harga]',
 									  stok = '$_POST[stok]',
 									 berat = '$_POST[berat]',
