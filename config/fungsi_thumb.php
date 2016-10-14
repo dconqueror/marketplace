@@ -1,5 +1,4 @@
 <?php
-
 function UploadImage($fupload_name){
   $vdir_upload = "../../../foto_produk/";
   $vfile_upload = $vdir_upload . $fupload_name;
