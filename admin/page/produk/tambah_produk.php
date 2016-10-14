@@ -4,7 +4,7 @@
 			<strong>Tambah Produk</strong>
 		</div>
 		<div class="panel-body">
-			<form class="form-horizontal" action="<?php echo"$siteadminurl";?>/query/produk/tambah.php" method="post">
+			<form class="form-horizontal" action="<?php echo"$siteadminurl";?>/query/produk/tambah.php" method="post" enctype="multipart/form-data">
 							<fieldset>
 
 								<div class="form-group">
@@ -63,6 +63,14 @@
 									<div class="col-md-1">
 									<input name="berat" type="text" placeholder="Kg" class="form-control">
 									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-3 control-label">File input</label>
+									<div class="col-md-9">
+									<input type="file" name="fupload">
+									 <p class="help-block">Pastikan gambar berekstensi .jpeg atau .png.</p>
+									 </div>
 								</div>
 
 								<div class="form-group">
