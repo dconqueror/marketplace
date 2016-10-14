@@ -11,11 +11,11 @@
 		</li>
 		
 		<li>
-			<a href="index.php?page=produksaya"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Produk Saya</a>
+			<a href="index.php?page=produksaya"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>Produk Saya</a>
 		</li>
 		
 		<li>
-			<a href="index.php?page=kategori"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Kategori</a>
+			<a href="index.php?page=kategori"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg></svg> Kategori</a>
 		</li>
 		
 

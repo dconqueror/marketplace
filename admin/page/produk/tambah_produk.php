@@ -67,7 +67,7 @@
 
 								<div class="form-group">
 									<label class="col-md-3 control-label">File input</label>
-									<div class="col-md-9">
+									<div class="col-md-3">
 									<input type="file" name="fupload">
 									 <p class="help-block">Pastikan gambar berekstensi .jpeg atau .png.</p>
 									 </div>

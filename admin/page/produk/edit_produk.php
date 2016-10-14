@@ -22,8 +22,17 @@
 							
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="kategori">Kategori</label>
-									<div class="col-md-9">
-										<input name="kategori" type="text" value="<?php echo $data['id_kategori']; ?>" class="form-control">
+									<div class="col-md-3">
+										<select name="kategori" class="form-control">
+										<?php 
+											include"../config/koneksi.php";
+											$q = mysql_query("select * from kategori");
+											while ($row1 = mysql_fetch_array($q)){
+											$selected = $data['id_kategori'] == $row1['id_kategori']?"selected":"''";
+												echo "<option value='".$row1['id_kategori']."'".$selected.">".$row1['nama_kategori']."</option>";
+											}
+										?>
+										</select>
 									</div>
 								</div>
 								
