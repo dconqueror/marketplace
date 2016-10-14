@@ -4,7 +4,7 @@
 			<strong>Produk Saya</strong>
 		</div>
 		<div class="panel-body">
-			<a href="<?php echo"$siteadminurl";?>/index.php?page=tambahkategori" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah Kategori</a>
+			<a href="<?php echo"$siteadminurl";?>/index.php?page=tambahproduk" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah Produk</a>
 			<table class="table table-hover">
 				<thead>
 					<tr>

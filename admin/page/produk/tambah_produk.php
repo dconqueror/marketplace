@@ -13,11 +13,20 @@
 									<input name="nama_produk" type="text" placeholder="Nama produk baru anda" class="form-control">
 									</div>
 								</div>
+
 							
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="kategori">Kategori</label>
-									<div class="col-md-9">
-										<input name="kategori" type="text" placeholder="Kategori produk anda" class="form-control">
+									<div class="col-md-3">
+										<select name="kategori" class="form-control"><option value="0">Pilih Kategori</option>
+										<?php 
+											include"../config/koneksi.php";
+											$q = mysql_query("select * from kategori");
+											while ($row1 = mysql_fetch_array($q)){
+											echo "<option value=$row1[id_kategori]>$row1[nama_kategori]</option>";
+											}
+										?>
+										</select>
 									</div>
 								</div>
 								
