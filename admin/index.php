@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 include"../config/koneksi.php";
 include"../config/config.php";
 if (empty($_GET['page'])) { $_GET['page'] = ""; }

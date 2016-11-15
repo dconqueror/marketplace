@@ -40,7 +40,7 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="satuan">Satuan</label>
 									<div class="col-md-3">
-									<input name="jenis" type="text" placeholder="Jenis Satuan" class="form-control">
+									<input name="satuan" type="text" placeholder="Jenis Satuan" class="form-control">
 									</div>
 								</div>
 								
